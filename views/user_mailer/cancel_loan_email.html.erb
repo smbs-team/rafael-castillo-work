@@ -1,0 +1,12 @@
+<b><%= @user.name.titleize + ":" %></b>
+<br><br>
+¡Tu préstamo fue cancelado🙁!
+<br><br>
+<% if @status == 'expired' %>
+Tus documentos legales del préstamo [mutuos] para <%= @loan.reasons.first.label.downcase%>, no fueron firmados a tiempo. Si aún necesitas el préstamo, completa nuevamente el formulario.
+<% else %>
+El tiempo habilitado para retirar tu dinero, ha vencido. Si aún necesitas el préstamo, completa nuevamente el formulario.
+<% end %>
+<br><br>
+¡Gracias por confiar en nosotros!
+Team Fiado
